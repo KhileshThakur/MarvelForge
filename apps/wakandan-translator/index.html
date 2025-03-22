@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakandan Name Translator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="background-animation"></div>
+
+    <div id="intro">
+        <h1 id="title">
+            <span class="letter">W</span>
+            <span class="letter">A</span>
+            <span class="letter">K</span>
+            <span class="letter">A</span>
+            <span class="letter">N</span>
+            <span class="letter">D</span>
+            <span class="letter">A</span>
+            <br>
+            <span class="letter">N</span>
+            <span class="letter">A</span>
+            <span class="letter">M</span>
+            <span class="letter">E</span>
+            <br>
+            <span class="letter">T</span>
+            <span class="letter">R</span>
+            <span class="letter">A</span>
+            <span class="letter">N</span>
+            <span class="letter">S</span>
+            <span class="letter">L</span>
+            <span class="letter">A</span>
+            <span class="letter">T</span>
+            <span class="letter">O</span>
+            <span class="letter">R</span>
+        </h1>
+    </div>
+
+    <div id="black-screen"></div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Initial delay for cinematic effect
+            setTimeout(() => {
+                document.getElementById("title").classList.add("fade-in");
+            }, 1500);
+
+            setTimeout(() => {
+                const letters = document.querySelectorAll(".letter");
+                
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.classList.add("wakandan");
+                    }, index * 200); // Slightly slower transition
+                });
+
+                setTimeout(() => {
+                    document.getElementById("black-screen").style.display = "block";
+                    setTimeout(() => {
+                        window.location.href = "app.html"; // Redirect to main app
+                    }, 600);
+                }, letters.length * 200 + 1200);
+
+            }, 3000); // Delay before text transformation starts
+        });
+    </script>
+
+</body>
+</html>

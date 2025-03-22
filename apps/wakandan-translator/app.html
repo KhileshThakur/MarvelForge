@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wakandan Name Translator</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <button class="back-button" onclick="goHome()">⬅ Home</button>
+    <div class="bg-overlay"></div>
+
+    <!-- Cinematic Header -->
+    <div class="header">
+        <h1 class="title">WAKANDAN NAME TRANSLATOR</h1>
+    </div>
+
+    <!-- Translator Section -->
+    <div class="translator-container">
+        <input type="text" id="nameInput" placeholder="Enter Your Name..." class="input-field"/>
+        <button class="translate-btn" onclick="translateName()">Translate</button>
+
+        <div class="result-box">
+            <p id="wakandanName"></p>
+            <p id="wakandanFont"></p>
+            <button id="speakButton" class="speak-btn" style="display: none;" onclick="speakName()">🔊 Hear Name</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
